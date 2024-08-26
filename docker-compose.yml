@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  mpi-node1:
+    image: mpi-docker
+    container_name: mpi-node1
+    hostname: mpi-node1
+    networks:
+      - mpi-network
+    volumes: 
+      - .:/workspace # Mounts the current directory (.) on the host to the '/workspace' directory inside the container.
+
+  mpi-node2:
+    image: mpi-docker
+    container_name: mpi-node2
+    hostname: mpi-node2
+    networks:
+      - mpi-network
+    volumes:
+      - .:/workspace
+
+networks:
+  mpi-network:
+    driver: bridge
