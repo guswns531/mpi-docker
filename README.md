@@ -109,7 +109,9 @@ docker build -t mpi-docker .
 
 ## Step 4: Set Up Docker Compose
 
-We will use Docker Compose to set up and manage our MPI containers. This configuration will create two containers, `mpi-node1` and `mpi-node2`, that will be connected on the same network, allowing them to communicate with each other. The current directory will be mounted to `/workspace` inside the containers.
+We will use Docker Compose to set up and manage our MPI containers. This configuration will create two containers, `mpi-node1` and `mpi-node2`, that will be connected on the same network, allowing them to communicate with each other. 
+
+*The current directory will be mounted to `/workspace` inside the containers.*
 
 ```yaml
 version: '3.8'
