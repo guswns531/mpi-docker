@@ -77,6 +77,7 @@ FROM ubuntu:20.04
 # Set environment variable to prevent interactive prompts
 ENV DEBIAN_FRONTEND=noninteractive
 ENV USERNAME=mpi
+ENV PASSWORD=mpi
 
 # Install essential packages and OpenMPI
 RUN apt-get update && apt-get install -y \
@@ -90,7 +91,8 @@ RUN apt-get update && apt-get install -y \
 
 # Create a new user and set the default shell to bash
 RUN useradd -m $USERNAME && \
-    usermod -s /bin/bash $USERNAME
+    usermod -s /bin/bash $USERNAME && \
+    echo "$USERNAME:$PASSWORD" | chpasswd
 
 # Copy SSH keys to the new user's home directory
 COPY .ssh /home/$USERNAME/.ssh
