@@ -1,17 +1,19 @@
 # MPI Docker Setup with Docker Compose
 
-This guide walks you through setting up an MPI (Message Passing Interface) environment using Docker and Docker Compose. We will create two Docker containers that can communicate with each other over SSH, enabling you to run distributed MPI programs.
+This guide walks you through setting up an MPI (Message Passing Interface) environment using Docker and Docker Compose. By following this guide, you will create two Docker containers that can communicate with each other over SSH, allowing you to run distributed MPI programs.
 
 ## Prerequisites
 
-Ensure that you have the following installed on your system:
+Ensure that the following are installed on your system:
 - Docker
 - Docker Compose
 
-### Install Docker and Docker Compose 
-reference : https://docs.docker.com/engine/install/ubuntu/
+### Install Docker and Docker Compose
 
-1.  Add Docker's official GPG key:
+You can refer to the official documentation to install Docker and Docker Compose:
+[Docker Installation Guide](https://docs.docker.com/engine/install/ubuntu/)
+
+1. Add Docker's official GPG key:
     ```bash
     sudo apt-get update
     sudo apt-get install ca-certificates curl
@@ -28,11 +30,28 @@ reference : https://docs.docker.com/engine/install/ubuntu/
 
     sudo apt-get update
     ```
-3.  Install the latest version
+3. Install the latest version:
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
 
+4. Add your user to the Docker group:
+    ```bash
+    sudo usermod -aG docker $USER
+    ```
+   Then, either restart your terminal or log out and log back in.
+
+5. Verify the installation:
+    ```bash
+    docker ps
+    ```
+    You should see an empty list, which indicates Docker is running correctly.
+
+6. Test Docker with the following command:
+    ```bash
+    docker run --rm hello-world
+    ```
+    This should display a message confirming that Docker is installed and working correctly.
 
 ## Step 1: Generate SSH Keys
 
