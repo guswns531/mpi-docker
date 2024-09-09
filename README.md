@@ -125,7 +125,7 @@ Save this as `Dockerfile`.
 ## Step 3: Build the Docker Image
 
 Now, build the Docker image using the `Dockerfile` created in the previous step.
-
+There is a warning to use enviorment for the password. It is safe to ignore it.
 ```bash
 docker build -t mpi-docker .
 ```
