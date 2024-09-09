@@ -254,6 +254,12 @@ Let’s create a simple MPI program, compile it, and run it across the container
    ```bash
    docker exec -u mpi mpi-node1 mpicc -o /workspace/hello_mpi /workspace/hello_mpi.c
    ```
+   if you see the permission error, run the following command before you try to compile again.
+   ```
+   cd ..
+   sudo chmod 777 workspace/
+   cd workspace
+   ```
 
 3. Run the compiled MPI program across the two containers:
 
