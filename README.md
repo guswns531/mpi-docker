@@ -34,7 +34,7 @@ You can refer to the official documentation to install Docker and Docker Compose
     click Ok and hit the **esc** key if you see some popup window 
 
     ```bash
-    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
     ```
 
 4. Add your user to the Docker group:
