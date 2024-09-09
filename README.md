@@ -129,6 +129,14 @@ There is a warning to use enviorment for the password. It is safe to ignore it.
 ```bash
 docker build -t mpi-docker .
 ```
+To check if the mpi-docker image is available.
+```bash
+docker images
+
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+mpi-docker    latest    a3a9fdac47cb   2 minutes ago   668MB
+```
+
 
 ## Step 4: Set Up Docker Compose
 
