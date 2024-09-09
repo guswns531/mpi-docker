@@ -281,3 +281,8 @@ When you're done, you can stop and remove the containers using:
 ```bash
 docker-compose down
 ```
+Check the container is down and removed. 
+```bash
+docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES`
+```
