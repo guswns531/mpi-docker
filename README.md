@@ -212,6 +212,12 @@ docker exec -u mpi mpi-node1 mpirun -np 2 -hostfile /workspace/hosts hostname
 ```
 
 This command runs the `hostname` command on each container to verify that MPI is working correctly.
+Ignore the warning message if it shows up.
+```bash
+Warning: Permanently added 'mpi-node2,172.18.0.2' (ECDSA) to the list of known hosts.
+mpi-node1
+mpi-node2
+```
 
 ## Step 7: Run a Simple MPI Program
 
