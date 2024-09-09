@@ -31,6 +31,8 @@ You can refer to the official documentation to install Docker and Docker Compose
     sudo apt-get update
     ```
 3. Install the latest version:
+    click Ok and hit the **esc** key if you see some popup window 
+
     ```bash
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
     ```
