@@ -8,7 +8,7 @@ Ensure that the following are installed on your system:
 - Docker
 - Docker Compose
 
-### Install Docker and Docker Compose
+### Step 0: Install Docker and Docker Compose
 
 You can refer to the official documentation to install Docker and Docker Compose:
 [Docker Installation Guide](https://docs.docker.com/engine/install/ubuntu/)
