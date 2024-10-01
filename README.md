@@ -257,7 +257,7 @@ Let’s create a simple MPI program, compile it, and run it across the container
    if you see the permission error, run the following command before you try to compile again.
    ```
    cd ..
-   sudo chmod 777 workspace/
+   chmod 777 workspace/
    cd workspace
    ```
 
